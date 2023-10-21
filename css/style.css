@@ -1,0 +1,533 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  text-transform: capitalize;
+  transition: all 0.4s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #f4f3f9;
+  border-radius: 5rem;
+}
+
+body {
+  background: url(../images/background.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+.heading h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 1rem;
+}
+.heading .publication-img {
+  border-radius: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #fff;
+  border: 0.2rem solid #2087cc;
+  background: no-repeat;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+}
+.btn:hover {
+  color: #000;
+  background: #fff;
+  border: 0.2rem solid rgba(238, 238, 238, 0.76);
+}
+
+/****************Header css*************************/
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 6rem;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.header .icon {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+.header .icon:hover {
+  color: #f4f3f9;
+}
+.header #menu-btn {
+  display: none;
+}
+.header .navbar a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+.header .navbar a:hover {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  color: yellow;
+}
+.header .navbar .space {
+  display: inline-block;
+  width: 16rem;
+}
+.header .logo {
+  position: absolute;
+  top: 4rem;
+  left: 48%;
+  transform: translateY(-50%);
+}
+.header .logo img {
+  width: 7rem;
+  border-radius: 50%;
+}
+.header .search-form {
+  height: 7rem;
+  padding: 0 2rem;
+  border-top: 0.2rem solid #2087cc;
+  display: flex;
+  align-items: center;
+  background: #000;
+  position: absolute;
+  top: 99%;
+  left: 0;
+  right: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.header .search-form.active {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.header .search-form input {
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.header .fa-times {
+  transform: rotate(180deg);
+}
+
+/**********************Home css *****************************/
+.home {
+  margin-top: 7rem;
+}
+.home .content {
+  max-width: 70rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.home img {
+  width: 40%;
+  border-radius: 10%;
+}
+.home h3 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.home p {
+  font-size: 1.7rem;
+  line-height: 2;
+  color: #f7f4f4;
+  padding: 2rem 0;
+}
+
+.service {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem;
+}
+.service .box {
+  text-align: center;
+  padding: 2rem;
+}
+.service .box i {
+  height: 7rem;
+  width: 7rem;
+  line-height: 7rem;
+  font-size: 2rem;
+  color: #000;
+  background: #f4f3f9;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+.service .box h3 {
+  padding: 1rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.service .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #f7f4f4;
+}
+
+/***********************menu css************************/
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem;
+}
+.menu .box-container .boxes {
+  text-align: center;
+}
+.menu .box-container .boxes:hover img {
+  transform: translateY(1rem);
+}
+.menu .box-container .boxes img {
+  height: 20rem;
+  width: 50%;
+}
+.menu .box-container .boxes .content {
+  padding: 1rem 0;
+}
+.menu .box-container .boxes .star {
+  margin-bottom: 2rem;
+}
+.menu .box-container .boxes .star i {
+  font-size: 1.7rem;
+  color: yellow;
+}
+.menu .box-container .boxes h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.menu .box-container .boxes .price {
+  font-size: 2.2rem;
+  line-height: 2;
+  color: #f7f4f4;
+}
+
+/*********************about section************************/
+.about {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.about .image {
+  flex: 1 1 40rem;
+  margin-left: 4rem;
+}
+.about .image img {
+  width: 55%;
+  height: 30rem;
+  border-radius: 10px;
+}
+.about .content {
+  flex: 1 1 40rem;
+}
+.about .content .title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.about .content p {
+  font-size: 1.7rem;
+  line-height: 2;
+  color: #f7f4f4;
+  padding: 2rem 0;
+}
+.about .content .icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.about .content .icons h3 {
+  flex: 1 1 16rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+.about .content .icons h3 i {
+  padding-right: 0.5rem;
+  color: #f4f3f9;
+}
+
+/***********************Reviews section css************************/
+.reviews .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem;
+}
+.reviews .box-container .box {
+  text-align: center;
+  padding: 2rem;
+}
+.reviews .box-container .box img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.reviews .box-container .box h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1rem 0;
+}
+.reviews .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #f7f4f4;
+  padding: 1rem 0;
+}
+.reviews .box-container .box .star {
+  padding-top: 0.5rem;
+}
+.reviews .box-container .box .star i {
+  font-size: 1.7rem;
+  color: yellow;
+}
+
+/**************************Contact***************************/
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.contact .row .map {
+  flex: 1 1 40rem;
+}
+.contact .row .form {
+  flex: 1 1 40rem;
+}
+.contact .row .form .icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contact .row .form .icons-container .icons {
+  flex: 1 1 17rem;
+  text-align: center;
+}
+.contact .row .form .icons-container .icons i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  border-radius: 50%;
+  background: #f4f3f9;
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact .row .form .icons-container .icons h3 {
+  padding: 1rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.contact .row .form .icons-container .icons p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #f7f4f4;
+}
+.contact .row .form form {
+  text-align: center;
+}
+.contact .row .form form .boxes {
+  padding: 1.2rem 1.4rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background: none;
+  border: 0.2rem solid #2087cc;
+  text-transform: none;
+  width: 100%;
+  margin: 0.7rem 0;
+}
+.contact .row .form form .boxes:focus {
+  border-color: #fff;
+}
+.contact .row .form form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+/********************Blogs section csss***************/
+.blogs .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem;
+}
+.blogs .box-container .box:hover .image img {
+  transform: scale(1.1);
+}
+.blogs .box-container .box:hover .image .icons {
+  transform: translateY(0);
+}
+.blogs .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+}
+.blogs .box-container .box .image .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transform: translateY(10rem);
+}
+.blogs .box-container .box .image .icons a {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.blogs .box-container .box .image .icons a i {
+  padding-right: 0.5rem;
+  color: #f4f3f9;
+}
+.blogs .box-container .box .image .icons a:hover {
+  color: #f4f3f9;
+}
+.blogs .box-container .box .image img {
+  border-radius: 20px;
+  box-shadow: 0 2px 2px 10px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blogs .box-container .box .content {
+  text-align: center;
+  padding: 2rem;
+}
+.blogs .box-container .box .content h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.blogs .box-container .box .content p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #f7f4f4;
+  padding: 1.5rem 0;
+}
+
+/*************footer section css***************/
+.footer {
+  margin-top: 4rem;
+  text-align: center;
+  background: linear-gradient(transparent, #000);
+}
+.footer .links a {
+  margin: 1rem;
+}
+.footer .created {
+  font-size: 2rem;
+  line-height: 2;
+  color: #f7f4f4;
+  padding-top: 2rem;
+}
+.footer .created span {
+  color: #f4f3f9;
+}
+
+@media (max-width: 1200) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width) {
+  html {
+    font-size: 50%;
+  }
+  .header {
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+  .header .logo {
+    transform: translateX(0);
+    left: 1rem;
+    top: 0;
+  }
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #000;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 3rem 2rem;
+  }
+  .header .navbar .space {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .heading img {
+    width: 100%;
+  }
+  .home .content h3 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */
